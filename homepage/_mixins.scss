@@ -1,4 +1,54 @@
-@mixin center-items{
+@mixin center-items {
+  display: flex;
+  align-items: center;
+}
+@mixin red-circle-style {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  background-color: #fb7181;
+  top: -10px;
+  left: 12px;
+}
+@mixin brand-names-p {
+  color: #262626;
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@mixin brand-counts-p {
+  color: #7d7d7d;
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  font-weight: 400;
+}
+@mixin leftbar-headers {
+  color: #22262a;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 500;
+}
+@mixin leftbar-content-box {
+  padding: 19px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 270px;
+  background-color: #f6f7f8;
+}
+@mixin color-circles-style {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@mixin space-between{
     display: flex;
-    align-items: center;
+      justify-content: space-between;
 }
