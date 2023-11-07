@@ -1,0 +1,124 @@
+.left-bar {
+  margin-left: 124px;
+  width: 270px;
+  .hot-deals {
+    margin-top: 32.31px;
+    @include leftbar-content-box;
+    h6 {
+      @include leftbar-headers;
+    }
+    .brands {
+      @include space-between;
+      .names {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          @include brand-names-p;
+        }
+        p:hover {
+          opacity: 0.6;
+        }
+      }
+      .counts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          @include brand-counts-p;
+        }
+      }
+    }
+  }
+  .prices {
+    margin-top: 30px;
+    @include leftbar-content-box;
+    h6 {
+      @include leftbar-headers;
+    }
+
+    .ranger {
+        @include space-between;
+
+      p {
+        @include brand-names-p;
+        cursor: auto;
+      }
+    }
+  }
+  .colors {
+    margin-top: 30px;
+    @include leftbar-content-box;
+    h6 {
+      @include leftbar-headers;
+    }
+    .color-btns {
+      display: flex;
+      width: 227px;
+      justify-content: space-between;
+      .circle {
+        @include color-circles-style;
+      }
+      .circle:hover {
+        transform: scale(1.3);
+      }
+      #blue {
+        background-color: rgb(72, 72, 252);
+      }
+      #red {
+        background-color: rgb(255, 67, 67);
+      }
+      #black {
+        background-color: black;
+      }
+      #yellow {
+        background-color: rgb(255, 255, 99);
+      }
+      #purple {
+        background-color: rgb(174, 71, 174);
+      }
+      #beige {
+        background-color: rgb(250, 236, 219);
+      }
+    }
+  }
+  .brands-list {
+    margin-top: 30px;
+    @include leftbar-content-box;
+    h6 {
+      @include leftbar-headers;
+    }
+    .brand-list {
+        @include space-between;
+
+      .brand-names {
+        @include brand-names-p;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        p {
+          transition: 0.3s;
+        }
+        p:hover {
+          opacity: 0.5;
+        }
+      }
+
+      .brands-count {
+        @include brand-counts-p;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+  .more{
+    margin-top: 32.31px;
+    @include leftbar-content-box;
+    h6 {
+      @include leftbar-headers;
+      text-align: center;
+    }
+  }
+}
