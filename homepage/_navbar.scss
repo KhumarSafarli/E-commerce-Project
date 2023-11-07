@@ -1,0 +1,119 @@
+.navbar-container {
+  padding: 34.53px 107.21px;
+  .navigation-items {
+    height: 72.52px;
+    @include center-items;
+    justify-content: space-between;
+
+    .language-settings {
+      @include center-items;
+      img {
+        margin-left: 5.16px;
+        margin-right: 13.15px;
+        width: 6.667px;
+        height: 4px;
+      }
+    }
+    .profile-settings {
+      display: flex;
+      align-items: center;
+      gap: 14.26px;
+      img {
+        margin-right: -6.53px;
+        width: 20px;
+      }
+      a {
+        position: relative;
+        img {
+          width: 24px;
+        }
+        display: flex;
+        align-items: center;
+        margin: 30px;
+      }
+      .red-circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid white;
+        position: absolute;
+        background-color: #fb7181;
+        top: -10px;
+        left: 12px;
+
+        p {
+           margin-left: 4px;
+          color: #fff;
+          text-align: center;
+          font-family: "Poppins";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%;
+          letter-spacing: 0.5px;
+        }
+      }
+      p {
+        margin-right: 14px;
+        cursor: pointer;
+      }
+      
+    }
+  }
+  .navbar-pages {
+    height: 119px;
+    @include center-items;
+    justify-content: space-between;
+    .logo-part {
+      @include center-items;
+      gap: 6.32px;
+      cursor: pointer;
+      h3 {
+        color: #22262a;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    .page-items {
+      width: 807px;
+      display: flex;
+      gap: 90px;
+      a:first-child {
+        color: #33a0ff;
+      }
+      a {
+        text-decoration: none;
+        color: #22262a;
+        font-size: 24px;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      a:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.navbar-footer {
+  @include center-items;
+  justify-content: center;
+  height: 51px;
+  background-color: #f6f7f8;
+  gap: 8px;
+  p {
+    font-family: "Proxima Nova";
+    font-size: 18px;
+  }
+  p:first-child {
+    color: #33a0ff;
+    cursor: pointer;
+  }
+  p:nth-child(2) {
+    color: #c1c8ce;
+  }
+  p:last-child {
+    color: #262626;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  padding: 34.53px 107.21px;
+}
+.navbar-container .navigation-items {
+  height: 72.52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-container .navigation-items .language-settings {
+  display: flex;
+  align-items: center;
+}
+.navbar-container .navigation-items .language-settings img {
+  margin-left: 5.16px;
+  margin-right: 13.15px;
+  width: 6.667px;
+  height: 4px;
+}
+.navbar-container .navigation-items .profile-settings {
+  display: flex;
+  align-items: center;
+  gap: 14.26px;
+}
+.navbar-container .navigation-items .profile-settings img {
+  margin-right: -6.53px;
+  width: 20px;
+}
+.navbar-container .navigation-items .profile-settings a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 30px;
+}
+.navbar-container .navigation-items .profile-settings a img {
+  width: 24px;
+}
+.navbar-container .navigation-items .profile-settings .red-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  background-color: #fb7181;
+  top: -10px;
+  left: 12px;
+}
+.navbar-container .navigation-items .profile-settings .red-circle p {
+  margin-left: 4px;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+}
+.navbar-container .navigation-items .profile-settings p {
+  margin-right: 14px;
+  cursor: pointer;
+}
+.navbar-container .navbar-pages {
+  height: 119px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-container .navbar-pages .logo-part {
+  display: flex;
+  align-items: center;
+  gap: 6.32px;
+  cursor: pointer;
+}
+.navbar-container .navbar-pages .logo-part h3 {
+  color: #22262a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+.navbar-container .navbar-pages .page-items {
+  width: 807px;
+  display: flex;
+  gap: 90px;
+}
+.navbar-container .navbar-pages .page-items a:first-child {
+  color: #33a0ff;
+}
+.navbar-container .navbar-pages .page-items a {
+  text-decoration: none;
+  color: #22262a;
+  font-size: 24px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.navbar-container .navbar-pages .page-items a:hover {
+  opacity: 0.6;
+}
+
+.navbar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 51px;
+  background-color: #f6f7f8;
+  gap: 8px;
+}
+.navbar-footer p {
+  font-family: "Proxima Nova";
+  font-size: 18px;
+}
+.navbar-footer p:first-child {
+  color: #33a0ff;
+  cursor: pointer;
+}
+.navbar-footer p:nth-child(2) {
+  color: #c1c8ce;
+}
+.navbar-footer p:last-child {
+  color: #262626;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../assets/fonts/ProximaNovaRegular.otf) format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../assets/fonts/ProximaNovaBold.otf) format("opentype");
+  font-weight: 700;
+}
+html {
+  font-family: "Poppins";
+}

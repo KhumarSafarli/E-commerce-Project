@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import "./mixins";
+@import "./navbar";
+@font-face {
+    font-family: "Poppins";
+    src: url(../assets/fonts/Poppins-Medium.ttf) format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Poppins";
+    src: url(../assets/fonts/Poppins-Bold.ttf) format("truetype");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/fonts/ProximaNovaRegular.otf) format("opentype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/fonts/ProximaNovaBold.otf) format("opentype");
+    font-weight: 700;
+  }
+  html{
+    font-family: "Poppins";
+  }
+
+
