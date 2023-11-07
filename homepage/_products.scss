@@ -1,0 +1,98 @@
+.center-body {
+  display: flex;
+  padding-top: 17.21px;
+  gap: 31.22px;
+
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    width: 961.569px;
+    .blue-container {
+      margin-top: 32px;
+      background-color: #40bfff;
+      height: 297.991px;
+      width: 961.569px;
+      position: relative;
+      img{
+        position: absolute;
+        top: -40px;
+        left: 450px;
+      }
+      .left-content {
+        margin-left: 109.76px;
+        margin-top: 57.99px;
+        h3 {
+          color: #fff;
+          font-size: 30px;
+          font-weight: 500;
+        }
+        p {
+            margin-top: 10px;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400;
+          margin-bottom: 24.74px;
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 12px;
+          font-weight: 500;
+        }
+        .border-line{
+            height: 2.7px;
+            background-color: white;
+            width: 37.56px;
+        }
+      }
+    }
+    .items-filter {
+      p {
+        color: #22262a;
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      padding: 19px 0px;
+      @include center-items;
+      justify-content: space-between;
+      height: 58px;
+      background-color: #f6f7f8;
+      .left-items {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        gap: 23px;
+        p:first-child {
+          margin-left: 22.23px;
+        }
+        .name {
+          @include center-items;
+          @include name-number-box-model;
+          p {
+            cursor: pointer;
+          }
+        }
+        .show-nums {
+          @include center-items;
+          @include name-number-box-model;
+          p {
+            cursor: pointer;
+          }
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+      .filter-buttons {
+        @include center-items;
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
