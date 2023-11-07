@@ -4,7 +4,6 @@
     height: 72.52px;
     @include center-items;
     justify-content: space-between;
-
     .language-settings {
       @include center-items;
       img {
@@ -57,7 +56,6 @@
         margin-right: 14px;
         cursor: pointer;
       }
-      
     }
   }
   .navbar-pages {
