@@ -1,48 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce</title>
-    <link rel="stylesheet" href="./style.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <header>
-        <div class="navbar-container">
-            <div class="navigation-items">
-                <div class="language-settings">
-                    <p>EN</p> <img src="./svg-icons/down.svg"/>
-                    <p>USD</p><img src="./svg-icons/down.svg"/>
-                </div>
-                <div class="profile-settings">
-                    <img src="./svg-icons/profile.svg"/><p>My profile</p>
-                    <a href="#"><img src="./svg-icons/basket.svg"/><div class="red-circle"><p>2</p></div></a>
-                    <p>Items</p>
-                    <p style = "color:gray">$0.00</p>
-                    <img src="./svg-icons/search.svg"/>
-                </div>
-            </div>
-            <div class="navbar-pages">
-                <div class="logo-part">
-                    <img src="./svg-icons/ecommerce.svg"/>
-                    <h3>E-Comm</h3>
-                </div>
-                <div class="page-items">
-                    <a href="#">HOME</a>
-                    <a href="#">BAG</a>
-                    <a href="#"> SNEAKERS</a>
-                    <a href="#">BELT</a>
-                    <a href="#">CONTACT</a>
-                </div>
-            </div>
+      <div class="navbar-container">
+        <div class="navigation-items">
+          <div class="language-settings">
+            <p>EN</p>
+            <img src="./svg-icons/down.svg" />
+            <p>USD</p>
+            <img src="./svg-icons/down.svg" />
+          </div>
+          <div class="profile-settings">
+            <img src="./svg-icons/profile.svg" />
+            <p>My profile</p>
+            <a href="#"
+              ><img src="./svg-icons/basket.svg" />
+              <div class="red-circle"><p>2</p></div></a
+            >
+            <p>Items</p>
+            <p style="color: gray">$0.00</p>
+            <img src="./svg-icons/search.svg" />
+          </div>
         </div>
-        <div class="navbar-footer">
-            <p>Hot</p>
-            <p>/</p>
-            <p>Deal</p>
+        <div class="navbar-pages">
+          <div class="logo-part">
+            <img src="./svg-icons/ecommerce.svg" />
+            <h3>E-Comm</h3>
+          </div>
+          <div class="page-items">
+            <a href="#">HOME</a>
+            <a href="#">BAG</a>
+            <a href="#"> SNEAKERS</a>
+            <a href="#">BELT</a>
+            <a href="#">CONTACT</a>
+          </div>
         </div>
+      </div>
+      <div class="navbar-footer">
+        <p>Hot</p>
+        <p>/</p>
+        <p>Deal</p>
+      </div>
     </header>
-    
-</body>
+    <div class="center-body">
+      <div class="left-bar">
+        <div class="hot-deals">
+          <h6>Hot Deals</h6>
+          <div class="brands">
+            <div class="names">
+              <p>Nike</p>
+              <p style = "color:#33A0FF">AirMax</p>
+              <p>Nike</p>
+              <p>Adidas</p>
+              <p>Vans</p>
+              <p>All Stars</p>
+              <p>Puma</p>
+            </div>
+            <div class="counts">
+              <p>2</p>
+              <p style = "color:#33A0FF">48</p>
+              <p>14</p>
+              <p>15</p>
+              <p>23</p>
+              <p>1</p>
+              <p>95</p>
+            </div>
+          </div>
+        </div>
+        <div class="prices">
+          <h6>PRICES</h6>
+          <div class="ranger">
+            <p>Ranger:</p>
+            <p>$13.99 - $25.99</p>
+          </div>
+          <input type="range" min="0" max="11" class="blue-slider"/>
+        </div>
+        <div class="colors">
+          <h6>COLOR</h6>
+          <div class="color-btns">
+            <div class="circle" id="blue"></div>
+            <div class="circle" id="red"></div>
+            <div class="circle" id="black"></div>
+            <div class="circle" id="yellow"></div>
+            <div class="circle" id="purple"></div>
+            <div class="circle" id="beige"></div>
+          </div>
+         
+        </div>
+        <div class="brands-list">
+            <h6>BRANDS</h6>
+            <div class="brand-list">
+              <div class="brand-names">
+                <p>Nike</p>
+                <p>Adidas</p>
+                <p>Puma</p>
+                <p>Vans</p>
+              </div>
+              <div class="brands-count">
+                <p>99</p>
+                <p>23</p>
+                <p>17</p>
+                <p>77</p>
+              </div>
+            </div>
+          </div>
+          <div class="more">
+            <h6>MORE</h6>
+          </div>
+      </div>
+      <div class="products-container">
+        <div class="blue-container"></div>
+        <div class="items-filter"></div>
+        <div class="products"></div>
+      </div>
+    </div>
+  </body>
 </html>
