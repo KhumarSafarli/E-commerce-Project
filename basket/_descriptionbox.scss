@@ -1,0 +1,207 @@
+.product-info {
+  display: flex;
+  width: 100%;
+  padding: 42.26px 127px;
+  justify-content: center;
+  .description-container {
+    display: flex;
+    width: 100%;
+    height: 999px;
+
+    .product-option {
+      display: flex;
+      gap: 53.74px;
+
+      .product-image {
+        display: flex;
+        flex-direction: column;
+        gap: 134.33px;
+        width: 375px;
+
+        .small-images-box {
+          display: flex;
+          gap: 15.5px;
+          img {
+            width: 86px;
+            height: 86px;
+            border: 2px solid #e5e8ea;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .product-adding {
+        width: 499.5px;
+        display: flex;
+        flex-direction: column;
+        gap: 22.41px;
+        h3 {
+          @include product-header-style;
+        }
+
+        .review-box {
+          display: flex;
+          gap: 17.7px;
+          img {
+            cursor: pointer;
+          }
+          p {
+            color: #c1c8ce;
+            font-family: "Proxima Nova";
+            font-size: 16px;
+            font-weight: 400;
+          }
+          .submit {
+            @include review-submit-button;
+            transition: 0.3s;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+        .borderline {
+          @include border-line-size;
+        }
+        .product-price {
+          @include center-items;
+          gap: 9.14px;
+
+          .new-price {
+            @include new-price-template;
+          }
+          .initial-price {
+            @include initial-price-template;
+          }
+          .discount {
+            @include discount-template;
+          }
+        }
+        .availability {
+          display: flex;
+          gap: 80px;
+          p {
+            color: #262626;
+            font-size: 14px;
+            font-weight: 400;
+          }
+
+          .key,
+          .value {
+            display: flex;
+            flex-direction: column;
+            gap: 15.95px;
+          }
+        }
+        .select-color {
+          @include center-items;
+          gap: 23.14px;
+          p {
+            color: #262626;
+            font-size: 16px;
+            font-weight: 400;
+          }
+          .color-btns {
+            display: flex;
+            gap: 18px;
+
+            .circle {
+              @include color-circles-style;
+            }
+            .circle:hover {
+              transform: scale(1.3);
+            }
+            #blue {
+              background-color: rgb(72, 72, 252);
+            }
+            #red {
+              background-color: rgb(255, 67, 67);
+            }
+            #black {
+              background-color: black;
+            }
+            #yellow {
+              background-color: rgb(255, 255, 99);
+            }
+          }
+        }
+        .size-box {
+          @include center-items;
+          gap: 98.36px;
+          p {
+            color: #262626;
+            font-size: 16px;
+            font-weight: 400;
+          }
+          .size-input {
+           @include size-input-template;
+            @include center-items;
+           &:hover{
+            border: 2px solid rgb(255, 156, 156);
+           }
+
+            img {
+              cursor: pointer;
+              &:hover {
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+        .add-to-cart {
+          @include center-items;
+          justify-content: space-between;
+
+          .quantity {
+            @include quantity-box-template;
+            @include center-items;
+            button {
+              border: none;
+              cursor: pointer;
+              background-color: transparent;
+            }
+            input {
+              border: none;
+              text-align: center;
+              background-color: transparent;
+              margin-left: 7px;
+            }
+          }
+          .add {
+            @include center-items;
+            gap: 17px;
+            .cart {
+              @include center-items;
+              @include add-to-cart-template;
+              &:hover {
+                background-color: #33a0ff96;
+                
+              }
+              p {
+                font-family: "Proxima Nova";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                color: #33A0FF;
+                transition: 0.3s;
+              }
+              &:hover p{
+                color:white;
+                transform: scale(1.1)
+              }
+            }
+            .favorite {
+              @include center-items;
+           @include add-to-favorites-template;
+           &:hover {
+            background-color: #33a0ff96;
+          }
+            }
+          }
+        }
+      }
+    }
+  }
+}
