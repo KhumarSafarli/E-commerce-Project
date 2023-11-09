@@ -1,0 +1,30 @@
+.products-list {
+  @include products-grid-template;
+  .product {
+    @include product-box-template;
+    > img {
+      width: 100%;
+    }
+    .product-description {
+      @include center-items;
+      flex-direction: column;
+      gap: 6.31px;
+      h4 {
+        @include product-name-font-template;
+      }
+      .product-price {
+        @include center-items;
+        gap: 13.14px;
+        .new-price {
+          @include new-price-template;
+        }
+        .initial-price {
+          @include initial-price-template;
+        }
+        .discount {
+          @include discount-template;
+        }
+      }
+    }
+  }
+}
