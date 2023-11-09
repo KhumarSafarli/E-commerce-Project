@@ -48,7 +48,60 @@
   transition: 0.3s;
 }
 
-@mixin space-between{
-    display: flex;
-      justify-content: space-between;
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin name-number-box-model {
+  width: 128.2px;
+  height: 38px;
+  justify-content: space-between;
+  padding-right: 16px;
+  text-align: center;
+  border: 3px solid rgb(241, 241, 241);
+  border-radius: 5px;
+}
+
+@mixin product-box-template {
+  width: 299.5px;
+  height: 385px;
+  border: 3px solid #f6f7f8;
+}
+
+@mixin product-name-font-template {
+  color: #223263;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+}
+
+@mixin products-grid-template {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+@mixin new-price-template {
+  color: #40bfff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 180%;
+  letter-spacing: 0.5px;
+}
+@mixin initial-price-template {
+  color: #9098b1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  text-decoration: line-through;
+}
+
+@mixin discount-template {
+  color: #fb7181;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
 }
