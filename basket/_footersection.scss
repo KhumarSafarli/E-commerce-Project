@@ -1,0 +1,65 @@
+.page-footer-section {
+  width: 100%;
+  @include center-items;
+  flex-direction: column;
+  gap: 83.76px;
+  margin-bottom: 87.76px;
+  h1 {
+    color: #22262a;
+    font-size: 35px;
+    font-weight: 600;
+  }
+
+  .related-products {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 34.5px;
+    .product {
+      @include product-box-template;
+      .product-description {
+        @include center-items;
+        flex-direction: column;
+        gap: 6.31px;
+        h4 {
+          @include product-name-font-template;
+        }
+        .product-rate {
+          cursor: pointer;
+        }
+        .product-price {
+          @include center-items;
+          gap: 13.14px;
+          .new-price {
+            @include new-price-template;
+          }
+          .initial-price {
+            @include initial-price-template;
+          }
+          .discount {
+            @include discount-template;
+          }
+        }
+      }
+      .product-image {
+        > img {
+          width: 100%;
+          transition: 0.3s;
+          cursor: pointer;
+          border: 2px solid transparent;
+          &:hover {
+            border: 2px solid rgb(255, 154, 154);
+            border-radius: 3px;
+            transform: translateY(-10px);
+          }
+        }
+      }
+    }
+  }
+}
+.bottom-part{
+    width: 100%;
+    height: 680px;
+    background-color: #BCDDFE;
+}
