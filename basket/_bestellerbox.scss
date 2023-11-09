@@ -1,0 +1,44 @@
+.bestseller-box {
+  width: 283.752px;
+  h2 {
+    @include besteller-heading;
+    margin-bottom: 38px;
+  }
+  .bestseller-item {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    > img {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover{
+        transform: scale(1.1)
+      }
+    }
+    .review-price {
+      @include center-items;
+      flex-direction: column;
+      gap: 11.96px;
+
+      .price-tag {
+        @include center-items;
+        gap: 11.42px;
+
+        .new, .old {
+          font-family: "Proxima Nova";
+          font-size: 16px;
+          font-weight: 400;
+        }
+       .new{
+        color: #ff4858;
+       }
+        .old{
+            color: #c1c8ce;
+            text-decoration: line-through;
+        }
+       
+      }
+    }
+  }
+}
