@@ -1,7 +1,8 @@
 .navbar-container {
-  padding: 34.53px 107.21px;
   .navigation-items {
     height: 72.52px;
+    border-bottom: 2px solid #fafafb;
+    padding: 34.53px 107.21px;
     @include center-items;
     justify-content: space-between;
     .language-settings {
@@ -14,8 +15,7 @@
       }
     }
     .profile-settings {
-      display: flex;
-      align-items: center;
+      @include center-items;
       gap: 14.26px;
       img {
         margin-right: -6.53px;
@@ -31,17 +31,10 @@
         margin: 30px;
       }
       .red-circle {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        border: 2px solid white;
-        position: absolute;
-        background-color: #fb7181;
-        top: -10px;
-        left: 12px;
+        @include red-circle-style;
 
         p {
-           margin-left: 4px;
+          margin-left: 4px;
           color: #fff;
           text-align: center;
           font-family: "Poppins";
@@ -59,9 +52,11 @@
     }
   }
   .navbar-pages {
+    padding: 34.53px 107.21px;
     height: 119px;
     @include center-items;
     justify-content: space-between;
+
     .logo-part {
       @include center-items;
       gap: 6.32px;
@@ -74,22 +69,58 @@
       }
     }
     .page-items {
-      width: 807px;
-      display: flex;
-      gap: 90px;
+      .pages {
+        width: 807px;
+        display: flex;
+        gap: 90px;
+      
+       
+      }
+      .homepage-link:hover .dropdown-content{
+        visibility: visible;
+       }
+      .dropdown-content {
+        visibility: hidden;
+        display: flex;
+        gap:45.41px;
+        @include dropdown-content-box;
+        padding: 41.04px 32.07px 0px 84.14px;
+        .navitems {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          h3 {
+            height: 36px;
+            color: #c1c8ce;
+            font-size: 22px;
+            font-weight: 500;
+          }
+          .categories {
+            width: 137px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            a {
+              color: #262626;
+              font-size: 16px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+
       a:first-child {
         color: #33a0ff;
       }
       a {
-        text-decoration: none;
-        color: #22262a;
-        font-size: 24px;
-        font-weight: 500;
-        transition: 0.3s;
+      @include navbar-link-style;
+      
       }
       a:hover {
         opacity: 0.6;
+        
       }
+      
     }
   }
 }
