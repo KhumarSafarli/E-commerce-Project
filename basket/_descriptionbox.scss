@@ -200,6 +200,27 @@
           }
             }
           }
+          
+        }
+        .social-media{
+          @include center-items;
+          gap: 10.63px;
+        }
+        .facebook, .twitter{
+          @include center-items;
+          @include social-media-buttons;
+          justify-content: center;
+          gap:12.32px;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+        .facebook{
+          background-color: #385C8E;
+          
+        }
+        .twitter{
+          background-color: #03A9F4;
         }
       }
     }
