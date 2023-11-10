@@ -35,7 +35,7 @@
       button {
         @include delete-button;
         transition: 0.2s;
-        &:hover{
+        &:hover {
           transform: scale(1.2);
         }
       }
@@ -70,20 +70,42 @@
       }
     }
   }
-  .total-amount{
+  .total-amount {
     display: flex;
     justify-content: space-between;
 
-    .voucher{
-     
-      input{
-       @include voucher-input-style;
+    .voucher {
+      input {
+        @include voucher-input-style;
       }
-      button{
+      button {
         @include voucher-button-style;
-        &:hover{
+        &:hover {
           opacity: 0.8;
         }
+      }
+    }
+    .total-bill {
+      width: 377.104px;
+      height: 310px;
+      .line {
+        margin-bottom: 28px;
+      }
+      .subtotal,
+      .shipping-fee,
+      .coupon,
+      .final-amount {
+        @include center-items;
+        justify-content: space-between;
+        margin-bottom: 23px;
+      }
+      .final-amount {
+        color: #22262a;
+        font-size: 30px;
+        font-weight: 500;
+      }
+      .checkout-btn {
+      @include checkout-btn-style;
       }
     }
   }
