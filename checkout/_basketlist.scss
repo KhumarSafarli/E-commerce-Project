@@ -1,0 +1,90 @@
+.basket-list {
+  width: 100%;
+  height: 100%;
+  padding: 46.94px 104.39px;
+  display: flex;
+  flex-direction: column;
+  .basket-headers {
+    @include center-items;
+    justify-content: space-between;
+
+    .product-header {
+      h2 {
+        color: #22262a;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .price-quantity-unit {
+      @include center-items;
+      gap: 115.95px;
+      p:hover {
+        color: rgba(91, 162, 255, 0.582);
+      }
+    }
+  }
+  .line {
+    @include checkout-page-line;
+  }
+  .selling-product {
+    @include center-items;
+    justify-content: space-between;
+
+    .left-side {
+      @include center-items;
+      button {
+        @include delete-button;
+        transition: 0.2s;
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
+      .selected-one {
+        width: 139.567px;
+        height: 130px;
+      }
+    }
+    .right-side-items {
+      @include center-items;
+      p {
+        color: #262626;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      .item-quantity {
+        @include center-items;
+        width: 124.537px;
+        height: 46px;
+        background-color: #f6f7f8;
+        justify-content: center;
+        gap: 30.28px;
+        margin-right: 85.08px;
+        margin-left: 110.68px;
+        button {
+          @include center-items;
+          cursor: pointer;
+          border: none;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .total-amount{
+    display: flex;
+    justify-content: space-between;
+
+    .voucher{
+     
+      input{
+       @include voucher-input-style;
+      }
+      button{
+        @include voucher-button-style;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
