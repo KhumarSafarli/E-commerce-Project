@@ -55,12 +55,18 @@ function fillBasketItems(items) {
     priceTagElement.className = "pricetag";
     priceTagElement.textContent = `$${item.price}`;
 
+    const priceTagValue = item.price * item.quantity;
+    priceTagElement.textContent = `$${priceTagValue}`;
+
     const itemQuantityElement = document.createElement("div");
     itemQuantityElement.className = "item-quantity";
 
     const minusButton = document.createElement("button");
     minusButton.className = "minus";
     minusButton.innerHTML = `<img src="../homepage/svg-icons/decrease.svg" />`;
+    if (item.quantity === 1) {
+        minusButton.style.opacity = 0.2;
+      }
 
     const quantityElement = document.createElement("p");
     quantityElement.className = "num";
@@ -86,31 +92,57 @@ function fillBasketItems(items) {
       if (item.quantity > 1) {
         item.quantity--;
         quantityElement.textContent = item.quantity;
+
+        const newPriceTagValue = item.price * item.quantity;
+        priceTagElement.textContent = `$${newPriceTagValue}`;
+
         updateTotalPrice();
+        saveBasketItemsToLocalStorage();
+        if (item.quantity === 1) {
+            minusButton.style.opacity = 0.2;
+          }
       }
     });
 
     plusButton.addEventListener("click", () => {
       item.quantity++;
       quantityElement.textContent = item.quantity;
+      const newPriceTagValue = item.price * item.quantity;
+      priceTagElement.textContent = `$${newPriceTagValue}`;
+
       updateTotalPrice();
+      saveBasketItemsToLocalStorage();
+      if (item.quantity > 1) {
+        minusButton.style.opacity = 1;
+      }
     });
+
     basketItemElement.appendChild(leftSideElement);
     basketItemElement.appendChild(rightSideItemsElement);
     basketContainerElement.appendChild(basketItemElement);
   });
 }
+
 function updateTotalPrice() {
   const items = getBasketItemsFromLocalStorage();
-  let totalPrice = 0;
+  let subtotal = 0;
 
   items.forEach((item) => {
-    totalPrice += item.price * item.quantity;
+    const itemTotal = item.price * item.quantity;
+    subtotal += itemTotal;
   });
 
   const totalElement = document.querySelector(".final");
-  totalElement.textContent = `$${totalPrice}`;
+  totalElement.textContent = `$${subtotal + 20}`; 
+
+  const subtotalElement = document.querySelector(".subtotal .sub");
+  subtotalElement.textContent = `$${subtotal}`;
+
 }
+function saveBasketItemsToLocalStorage() {
+    localStorage.setItem("basketItems", JSON.stringify(basketItems));
+  }
+
 fillBasketItems(basketItems);
 const initialBasketCount = getBasketCountFromLocalStorage() || 0;
 updateBasketDisplay(initialBasketCount);
