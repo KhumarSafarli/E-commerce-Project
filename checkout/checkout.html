@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../homepage/style.css" />
     <script defer src="../homepage/data.js"></script>
     <script defer src="../homepage/home.js"></script>
+    <script defer src="./checkout.js"></script>
   </head>
   <body>
     <header>
@@ -94,7 +95,7 @@
                 </div>
               </div>
               <a href="#">BAG</a>
-              <a href="#"> SNEAKERS</a>
+              <a href="../basket/basket.html"> SNEAKERS</a>
               <a href="#">BELT</a>
               <a href="#">CONTACT</a>
             </div>
@@ -110,60 +111,53 @@
         <p class="selected-product-name">Nike Airmax 270 React</p>
       </div>
     </header>
-    <div class="basket-list">
-      
-        <div class="line"></div>
-        <div class="selling-product">
-        <div class="left-side">
-          <button class="delete">
-            <img src="../homepage/svg-icons/deleteicon.svg" />
-          </button>
-          <img src="../assets/images/sneaker.png" class="selected-one" />
-          <p class="sneaker-name"></p>
+     <div class="basket-list">
+      <div class="basket-headers">
+        <div class="product-header">
+          <h2>PRODUCT</h2>
         </div>
-        <div class="right-side-items">
-          <p class="pricetag">$999</p>
-          <div class="item-quantity">
-            <button class="minus">
-              <img src="../homepage/svg-icons/decrease.svg" />
-            </button>
-            <p class="num">2</p>
-            <button class="plus">
-              <img src="../homepage/svg-icons/increase.svg" />
-            </button>
-          </div>
-          <p class="unit-price">$499</p>
+        <div class="price-quantity-unit">
+          <p>PRICE</p>
+          <p>QTY</p>
+          <p>UNIT PRICE</p>
         </div>
       </div>
-      <div class="line"></div>
-      <div class="total-amount">
-        <div class="voucher">
-          <input type="text" placeholder="Voucher Code"/><button class="redeem">Redeem</button>
+      
+        <div class="selling-product">
+      
         </div>
-        <div class="total-bill">
+        
+       
+        
+    </div>
+    <div class="total-amount">
+      <div class="voucher">
+          <input type="text" placeholder="Voucher Code" /><button class="redeem">Redeem</button>
+      </div>
+      <div class="total-bill">
           <div class="subtotal">
-            <p>Subtotal</p>
-            <p class="sub"> $998</p>
+              <p>Subtotal</p>
+              <p class="sub"></p>
           </div>
           <div class="shipping-fee">
-            <p>Shipping fee</p>
-            <p class="ship"> $20</p>
+              <p>Shipping fee</p>
+              <p class="ship"> $20</p>
           </div>
           <div class="coupon">
-            <p>Coupon</p>
-            <p class="ship"> No</p>
+              <p>Coupon</p>
+              <p class="ship"> No</p>
           </div>
           <div class="line"></div>
           <div class="final-amount">
-            <p>TOTAL</p>
-            <p class="final"> $118</p>
+              <p>TOTAL</p>
+              <p class="final"> </p>
           </div>
           <button class="checkout-btn">Checkout</button>
-        </div>
       </div>
-    </div>
+  </div>
+  </div>
     <div class="page-footer">
-            
+
     </div>
    
   </body>
