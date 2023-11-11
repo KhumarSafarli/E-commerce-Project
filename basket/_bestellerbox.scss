@@ -16,10 +16,14 @@
         transform: scale(1.1)
       }
     }
+    
     .review-price {
       @include center-items;
       flex-direction: column;
       gap: 11.96px;
+      img{
+        cursor: pointer;
+      }
 
       .price-tag {
         @include center-items;
@@ -40,5 +44,11 @@
        
       }
     }
+  }
+  .group-line{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
   }
 }

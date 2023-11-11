@@ -116,7 +116,6 @@ function fillBasketItems(items) {
         minusButton.style.opacity = 1;
       }
     });
-
     basketItemElement.appendChild(leftSideElement);
     basketItemElement.appendChild(rightSideItemsElement);
     basketContainerElement.appendChild(basketItemElement);

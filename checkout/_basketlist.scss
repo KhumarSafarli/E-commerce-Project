@@ -1,6 +1,5 @@
 .basket-list {
   width: 100%;
-  height: 100%;
   padding: 46.94px 104.39px;
   display: flex;
   flex-direction: column;
@@ -17,7 +16,10 @@
     }
     .price-quantity-unit {
       @include center-items;
-      gap: 115.95px;
+      gap: 126.55px;
+      p{
+        font-size: 20px;
+      }
       p:hover {
         color: rgba(91, 162, 255, 0.582);
       }
@@ -29,9 +31,11 @@
   .selling-product {
     @include center-items;
     justify-content: space-between;
+    margin-bottom: 53px;
 
     .left-side {
       @include center-items;
+      gap:28.27px;
       button {
         @include delete-button;
         transition: 0.2s;
@@ -70,43 +74,46 @@
       }
     }
   }
-  .total-amount {
-    display: flex;
-    justify-content: space-between;
+  
+}
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 46.94px 104.39px;
 
-    .voucher {
-      input {
-        @include voucher-input-style;
-      }
-      button {
-        @include voucher-button-style;
-        &:hover {
-          opacity: 0.8;
-        }
+
+  .voucher {
+    input {
+      @include voucher-input-style;
+    }
+    button {
+      @include voucher-button-style;
+      &:hover {
+        opacity: 0.8;
       }
     }
-    .total-bill {
-      width: 377.104px;
-      height: 310px;
-      .line {
-        margin-bottom: 28px;
-      }
-      .subtotal,
-      .shipping-fee,
-      .coupon,
-      .final-amount {
-        @include center-items;
-        justify-content: space-between;
-        margin-bottom: 23px;
-      }
-      .final-amount {
-        color: #22262a;
-        font-size: 30px;
-        font-weight: 500;
-      }
-      .checkout-btn {
-      @include checkout-btn-style;
-      }
+  }
+  .total-bill {
+    width: 377.104px;
+    height: 310px;
+    .line {
+      margin-bottom: 28px;
+    }
+    .subtotal,
+    .shipping-fee,
+    .coupon,
+    .final-amount {
+      @include center-items;
+      justify-content: space-between;
+      margin-bottom: 23px;
+    }
+    .final-amount {
+      color: #22262a;
+      font-size: 30px;
+      font-weight: 500;
+    }
+    .checkout-btn {
+    @include checkout-btn-style;
     }
   }
 }

@@ -4,7 +4,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+       quantity: 1,
       image: "../assets/images/sneaker.png",
      
     },
@@ -13,7 +13,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+       quantity: 1,
       image: "../assets/images/blue-shoe.png"
       
     },
@@ -22,7 +22,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+      quantity: 1,
       image: "../assets/images/yellow-sneaker.png"
     },
     {
@@ -30,7 +30,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+     quantity: 1,
       image: "../assets/images/wallet.png"
     },
     {
@@ -38,7 +38,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+       quantity: 1,
       image: "../assets/images/bag.png"
     },
     {
@@ -46,7 +46,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+      quantity: 1,
       image: "../assets/images/backside-sneaker.png"
     },
     {
@@ -54,7 +54,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+       quantity: 1,
       image: "../assets/images/foot.png"
     },
     {
@@ -62,7 +62,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+      quantity: 1,
       image: "../assets/images/sneaker.png"
     },
     {
@@ -70,7 +70,7 @@ const products = [
       title: "Nike Air Max 270 React",
       price: 299.43,
       newPrice: 0,
-      // quantity: 1,
+       quantity: 1,
       image: "../assets/images/bag.png"
     },
 ]

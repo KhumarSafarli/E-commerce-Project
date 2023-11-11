@@ -1,4 +1,5 @@
 const productContainerElement = document.querySelector(".products-list");
+
 let basketCount = getBasketCountFromLocalStorage() || 0;
 function updateBasketCount() {
     basketCount++;
@@ -13,6 +14,14 @@ function saveBasketCountToLocalStorage() {
 function getBasketCountFromLocalStorage() {
     return parseInt(localStorage.getItem("basketCount"));
 }
+function saveBasketItemsToLocalStorage(items) {
+    localStorage.setItem("basketItems", JSON.stringify(items));
+}
+
+function getBasketItemsFromLocalStorage() {
+    return JSON.parse(localStorage.getItem("basketItems")) || [];
+}
+
 
 function fillProducts(products) {
     products.forEach((product) => {
@@ -52,6 +61,7 @@ function fillProducts(products) {
         basketIcon.src = "./svg-icons/basket.svg";
         basketButton.addEventListener("click", () => {
             updateBasketCount();
+            addToBasket(product);
            
         });
         basketButton.appendChild(basketIcon);
@@ -113,6 +123,11 @@ function fillProducts(products) {
 
         productContainerElement.appendChild(productElement);
     });
+}
+function addToBasket(product) {
+    let basketItems = JSON.parse(localStorage.getItem("basketItems")) || [];
+    basketItems.push(product);
+    saveBasketItemsToLocalStorage(basketItems);
 }
 fillProducts(products);
 const redCircle = document.querySelector(".red-circle p.my-basket");

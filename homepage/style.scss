@@ -4,7 +4,22 @@
     box-sizing: border-box;
 }
 @import "./mixins";
+@import "./products";
+@import "./productlist";
 @import "./navbar";
+@import "./leftbar";
+@import "./productlist";
+@import "../basket/descriptionbox";
+@import "../basket/infobox";
+@import "../basket/bestellerbox";
+@import "../basket/footersection";
+@import "../checkout/basketlist";
+
+
+body{
+    height: 100vh;
+   
+}
 @font-face {
     font-family: "Poppins";
     src: url(../assets/fonts/Poppins-Medium.ttf) format("truetype");

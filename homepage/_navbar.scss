@@ -1,4 +1,5 @@
 .navbar-container {
+  
   .navigation-items {
     height: 72.52px;
     border-bottom: 2px solid #fafafb;
@@ -34,7 +35,7 @@
         @include red-circle-style;
 
         p {
-          margin-left: 4px;
+          margin-left: 4.5px;
           color: #fff;
           text-align: center;
           font-family: "Poppins";
@@ -78,6 +79,7 @@
       }
       .homepage-link:hover .dropdown-content{
         visibility: visible;
+        
        }
       .dropdown-content {
         visibility: hidden;

@@ -4,6 +4,70 @@
     @include product-box-template;
     > img {
       width: 100%;
+      position: relative;
+    }
+
+    .product-image:hover .hover-layer {
+      display: initial;
+    }
+    .product-image {
+      position: relative;
+
+      .hover-layer {
+        display: none;
+        width: 278px;
+        height: 219px;
+        position: absolute;
+        background-color: #fff;
+        opacity: 0.95;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.4s;
+
+        .action-buttons {
+          width: 113px;
+          height: 51px;
+          @include center-items;
+          justify-content: center;
+          margin: auto;
+          margin-top: 30%;
+          gap: 20px;
+
+          button {
+            width: 40px;
+            height: 40px;
+            outline: none;
+            background-color: transparent;
+            border: 3px solid #33a0ff14;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+
+            img {
+              display: flex;
+              margin: auto;
+            }
+          }
+          button:hover {
+            transform: scale(1.1);
+            border: 3px solid #2397fd6c;
+          }
+        }
+      }
+    }
+
+    .hot-item {
+      @include hot-item-box;
+      @include center-items;
+      h5 {
+        text-align: center;
+        margin: auto;
+        color: #fff;
+        font-family: "Proxima Nova";
+        font-size: 18px;
+        font-weight: 400;
+      }
     }
     .product-description {
       @include center-items;
@@ -11,6 +75,9 @@
       gap: 6.31px;
       h4 {
         @include product-name-font-template;
+      }
+      .product-rate {
+        cursor: pointer;
       }
       .product-price {
         @include center-items;
@@ -27,4 +94,34 @@
       }
     }
   }
+}
+.pages-list {
+  height: 56px;
+  @include center-items;
+  justify-content: center;
+  gap: 63.77px;
+  background-color: #fafafb;
+
+  p {
+    color: #22262a;
+    font-family: "Proxima Nova";
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .active {
+    width: 62.92px;
+    height: 56px;
+    background-color: #40bfff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+}
+.page-footer {
+  margin-top: 154.82px;
+  width: 100%;
+  height: 680.594px;
+  background-color: #bcddfe;
 }
