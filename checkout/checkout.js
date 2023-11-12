@@ -4,7 +4,7 @@ const basketItems = getBasketItemsFromLocalStorage();
 
 function updateBasketCount() {
   let basketCount = getBasketCountFromLocalStorage() || 0;
-  basketCount++;
+  basketCount--;
   saveBasketCountToLocalStorage(basketCount);
   updateBasketDisplay(basketCount);
 }
@@ -23,7 +23,7 @@ function updateBasketDisplay(count) {
 }
 
 function fillBasketItems(items) {
-  items.forEach((item) => {
+  items.forEach((item, index) => {
     const basketItemElement = document.createElement("div");
     basketItemElement.className = "selling-product";
 
@@ -33,6 +33,17 @@ function fillBasketItems(items) {
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete";
     deleteButton.innerHTML = `<img src="../homepage/svg-icons/deleteicon.svg" />`;
+    deleteButton.addEventListener("click", () => {
+      const isConfirmed = confirm("Are you sure you want to delete?");
+      if(isConfirmed){
+      basketItems.splice(index, 1);
+      saveBasketItemsToLocalStorage();
+      basketItemElement.remove();
+      saveBasketItemsToLocalStorage();
+      updateTotalPrice();
+      updateBasketCount();
+    }
+    });
 
     const productImageElement = document.createElement("img");
     productImageElement.src = item.image;
@@ -92,16 +103,15 @@ function fillBasketItems(items) {
       if (item.quantity > 1) {
         item.quantity--;
         quantityElement.textContent = item.quantity;
-
         const newPriceTagValue = item.price * item.quantity;
         priceTagElement.textContent = `$${newPriceTagValue}`;
-
-        updateTotalPrice();
         saveBasketItemsToLocalStorage();
+        updateTotalPrice();
         if (item.quantity === 1) {
             minusButton.style.opacity = 0.2;
           }
       }
+      
     });
 
     plusButton.addEventListener("click", () => {
@@ -109,9 +119,9 @@ function fillBasketItems(items) {
       quantityElement.textContent = item.quantity;
       const newPriceTagValue = item.price * item.quantity;
       priceTagElement.textContent = `$${newPriceTagValue}`;
-
-      updateTotalPrice();
       saveBasketItemsToLocalStorage();
+      updateTotalPrice();
+      
       if (item.quantity > 1) {
         minusButton.style.opacity = 1;
       }
