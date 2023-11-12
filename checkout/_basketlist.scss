@@ -1,11 +1,28 @@
+.navbar-container {
+  @include for-size(mobile) {
+    display: none;
+  }
+}
 .basket-list {
   width: 100%;
   padding: 46.94px 104.39px;
   display: flex;
   flex-direction: column;
+  @include for-size(mobile) {
+    padding: 26px 16px;
+  }
+  .your-cart {
+    display: none;
+    @include for-size(mobile) {
+      @include your-cart-mobile-format;
+    }
+  }
   .basket-headers {
     @include center-items;
     justify-content: space-between;
+    @include for-size(mobile) {
+      display: none;
+    }
 
     .product-header {
       h2 {
@@ -17,7 +34,7 @@
     .price-quantity-unit {
       @include center-items;
       gap: 126.55px;
-      p{
+      p {
         font-size: 20px;
       }
       p:hover {
@@ -27,20 +44,47 @@
   }
   .line {
     @include checkout-page-line;
+    @include for-size(mobile) {
+      display: none;
+    }
   }
   .selling-product {
     @include center-items;
     justify-content: space-between;
     margin-bottom: 53px;
+    @include for-size(mobile) {
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
 
     .left-side {
       @include center-items;
-      gap:28.27px;
+      gap: 28.27px;
+      @include for-size(mobile) {
+        gap: 12px;
+      }
+
+      p {
+        @include for-size(mobile) {
+          @include product-header-mobile-style;
+          transform: translateY(-20px);
+        }
+      }
       button {
         @include delete-button;
         transition: 0.2s;
+        @include for-size(mobile) {
+          position: absolute;
+          transform: translate(280px, -20px);
+        }
         &:hover {
           transform: scale(1.2);
+        }
+      }
+      > img {
+        @include for-size(mobile) {
+          width: 72px;
+          height: 72px;
         }
       }
       .selected-one {
@@ -50,21 +94,34 @@
     }
     .right-side-items {
       @include center-items;
+      @include for-size(mobile) {
+        margin-left: 100px;
+        transform: translateY(20px);
+        position: absolute;
+      }
       p {
         color: #262626;
         font-size: 18px;
         font-weight: 400;
+        @include for-size(mobile) {
+          color: #40bfff;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 150%;
+          letter-spacing: 0.5px;
+        }
       }
-
+      .unit-price {
+        @include for-size(mobile) {
+          display: none;
+        }
+      }
       .item-quantity {
         @include center-items;
-        width: 124.537px;
-        height: 46px;
-        background-color: #f6f7f8;
-        justify-content: center;
-        gap: 30.28px;
-        margin-right: 85.08px;
-        margin-left: 110.68px;
+        @include item-quantity-size;
+        @include for-size(mobile) {
+          margin-left: 70px;
+        }
         button {
           @include center-items;
           cursor: pointer;
@@ -74,15 +131,22 @@
       }
     }
   }
-  
 }
 .total-amount {
   display: flex;
   justify-content: space-between;
   padding: 46.94px 104.39px;
-
+  @include for-size(mobile) {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
 
   .voucher {
+    @include for-size(mobile) {
+      display: flex;
+      width: 343px;
+    }
     input {
       @include voucher-input-style;
     }
@@ -96,6 +160,9 @@
   .total-bill {
     width: 377.104px;
     height: 310px;
+    @include for-size(mobile) {
+      width: 343px;
+    }
     .line {
       margin-bottom: 28px;
     }
@@ -113,7 +180,10 @@
       font-weight: 500;
     }
     .checkout-btn {
-    @include checkout-btn-style;
+      @include checkout-btn-style;
+      @include for-size(mobile) {
+        width: 343px;
+      }
     }
   }
 }
