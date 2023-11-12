@@ -1,15 +1,19 @@
 .navbar-container {
-  @include for-size (mobile){
-    display: none;
-  }
+  
   .navigation-items {
     height: 72.52px;
     border-bottom: 2px solid #fafafb;
     padding: 34.53px 107.21px;
     @include center-items;
     justify-content: space-between;
+    @include for-size (mobile){
+      padding: 16px;
+    }
     .language-settings {
       @include center-items;
+      @include for-size (mobile){
+        display: none;
+      }
       img {
         margin-left: 5.16px;
         margin-right: 13.15px;
@@ -19,10 +23,14 @@
     }
     .profile-settings {
       @include center-items;
+      @include for-size(mobile){
+        gap:10px;
+      }
       gap: 14.26px;
       img {
         margin-right: -6.53px;
         width: 20px;
+        cursor: pointer;
       }
       a {
         position: relative;
@@ -51,6 +59,10 @@
       p {
         margin-right: 14px;
         cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+          color:rgb(255, 128, 128);
+        }
       }
     }
   }
@@ -59,6 +71,9 @@
     height: 119px;
     @include center-items;
     justify-content: space-between;
+    @include for-size (mobile){
+      display: none;
+    }
 
     .logo-part {
       @include center-items;

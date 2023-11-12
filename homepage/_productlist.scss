@@ -1,5 +1,5 @@
 .products-list {
-  @include font-size(mobile){
+  @include for-size(mobile){
     overflow: hidden;
     overflow-y: scroll;
   }
@@ -17,6 +17,9 @@
 
     .product-image:hover .hover-layer {
       display: initial;
+      @include for-size(mobile){
+        display: none;
+      }
     }
     .product-image {
       position: relative;
@@ -32,6 +35,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         transition: 0.4s;
+        
 
         .action-buttons {
           width: 113px;
@@ -55,6 +59,7 @@
             img {
               display: flex;
               margin: auto;
+              width: 15px;
             }
           }
           button:hover {
@@ -91,6 +96,11 @@
       }
       h4 {
         @include product-name-font-template;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover{
+          color:rgb(255, 56, 56);
+        }
       }
       .product-rate {
         cursor: pointer;

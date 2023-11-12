@@ -1,5 +1,7 @@
 .left-bar {
- 
+  @include for-size (mobile){
+    display: none;
+  }
   width: 270px;
   .hot-deals {
     margin-top: 32.31px;
@@ -119,6 +121,10 @@
     h6 {
       @include leftbar-headers;
       text-align: center;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.7;
+      }
     }
   }
 }

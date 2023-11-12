@@ -5,6 +5,14 @@ function updateBasketCount() {
     updateBasketDisplay(basketCount);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+    const selectedProductImage = document.querySelector(".selected-product");
+    if (selectedProduct) {
+        selectedProductImage.src = selectedProduct.image;
+    }
+});
+
 function saveBasketCountToLocalStorage(count) {
     localStorage.setItem("basketCount", count);
 }

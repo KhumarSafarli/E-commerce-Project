@@ -73,6 +73,11 @@
   width: 299.5px;
   height: 385px;
   border: 3px solid #f6f7f8;
+  @include for-size(mobile) {
+    width: 165px;
+    height: 305px;
+    padding: 16px;
+  }
 }
 
 @mixin product-name-font-template {
@@ -88,6 +93,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
+  @include for-size(mobile) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+    width: 100%;
+    justify-items: center;
+  }
 }
 @mixin new-price-template {
   color: #40bfff;
@@ -254,4 +265,42 @@
   &:hover {
     opacity: 0.8;
   }
+}
+
+@mixin for-size($screen) {
+  @if $screen ==tablet {
+    @media screen and (max-width: 1440px) {
+      @content;
+    }
+  } @else if $screen ==mobile {
+    @media screen and (max-width: 1194px) {
+      @content;
+    }
+  }
+}
+@mixin product-header-mobile-style {
+  color: #223263;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+}
+@mixin item-quantity-size {
+  width: 124.537px;
+  height: 46px;
+  background-color: #f6f7f8;
+  justify-content: center;
+  gap: 30.28px;
+  margin-right: 85.08px;
+  margin-left: 110.68px;
+}
+@mixin your-cart-mobile-format{
+  display: initial;
+      color: #223263;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: 0.08px;
+      width: 100%;
 }
