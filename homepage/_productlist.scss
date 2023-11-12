@@ -1,10 +1,18 @@
 .products-list {
+  @include font-size(mobile){
+    overflow: hidden;
+    overflow-y: scroll;
+  }
   @include products-grid-template;
   .product {
     @include product-box-template;
-    > img {
+    img {
       width: 100%;
-      position: relative;
+     
+      @include for-size(mobile){
+        width: 133px;
+        height: 133px;
+      }
     }
 
     .product-image:hover .hover-layer {
@@ -60,6 +68,9 @@
     .hot-item {
       @include hot-item-box;
       @include center-items;
+      @include for-size(mobile){
+        display: none;
+      }
       h5 {
         text-align: center;
         margin: auto;
@@ -73,23 +84,52 @@
       @include center-items;
       flex-direction: column;
       gap: 6.31px;
+      @include for-size(mobile){
+        width: 133px;
+        height: 109px;
+        gap:2px;
+      }
       h4 {
         @include product-name-font-template;
       }
       .product-rate {
         cursor: pointer;
+        img{
+          @include for-size(mobile){
+            width: 68px;
+            height: 13px;
+          }
+        }
       }
       .product-price {
         @include center-items;
         gap: 13.14px;
+        @include for-size(mobile){
+          width: 92px;
+          height: 41px;
+          display: flex;
+          flex-direction: column;
+          font-size: 11px;
+          gap:2px;
+        }
         .new-price {
           @include new-price-template;
+          @include for-size(mobile){
+            font-size: 12px;
+          }
         }
+        
         .initial-price {
           @include initial-price-template;
+          @include for-size(mobile){
+            font-size: 10px;
+          }
         }
         .discount {
           @include discount-template;
+          @include for-size(mobile){
+            font-size: 10px;
+          }
         }
       }
     }
@@ -101,6 +141,9 @@
   justify-content: center;
   gap: 63.77px;
   background-color: #fafafb;
+  @include for-size(mobile){
+    display: none;
+  }
 
   p {
     color: #22262a;
@@ -124,4 +167,7 @@
   width: 100%;
   height: 680.594px;
   background-color: #bcddfe;
+  @include for-size(mobile){
+    display: none;
+  }
 }
