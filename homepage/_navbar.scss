@@ -1,5 +1,7 @@
 .navbar-container {
-  
+  @include for-size (mobile){
+    display: none;
+  }
   .navigation-items {
     height: 72.52px;
     border-bottom: 2px solid #fafafb;
@@ -132,6 +134,9 @@
   height: 51px;
   background-color: #f6f7f8;
   gap: 8px;
+  @include for-size (mobile){
+    display: none;
+  }
   p {
     font-family: "Proxima Nova";
     font-size: 18px;
